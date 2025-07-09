@@ -1,4 +1,4 @@
-# Exercise: React Caffe Retro
+# Exercise: Caffe Retro
 
 ## Description
 
