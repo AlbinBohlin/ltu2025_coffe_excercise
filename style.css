@@ -1,7 +1,13 @@
 body{
-    margin:30%;
+    margin:15%;
+    
 
 }
+
+p::first-letter{
+    text-transform: uppercase;
+}
+
 
 .header, .page_title {
     
@@ -9,7 +15,12 @@ body{
 
 }
 
-.moving_text, .menu{
-    font-size: 2rem;
+ .main_ .moving_text, .info {
+   
     font-family: "Poiret One", sans-serif;
+    font-size: 1.8rem;
+}
+
+ul{
+    list-style: none;
 }
