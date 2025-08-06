@@ -1,0 +1,15 @@
+body{
+    margin:30%;
+
+}
+
+.header, .page_title {
+    
+    font-family: "Spirax", sans-serif;
+
+}
+
+.moving_text, .menu{
+    font-size: 2rem;
+    font-family: "Poiret One", sans-serif;
+}
