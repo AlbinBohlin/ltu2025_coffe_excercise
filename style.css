@@ -1,26 +1,137 @@
-body{
-    margin:15%;
-    
+body {
+  display: grid;
+  box-sizing: border-box;
+  /* max-width: 700px; */
+  grid-template-columns: 1fr 1fr 50% 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  height: 100vh;
+  grid-gap: 1rem;
+  /* margin: auto; */
 
+  background: url(./assets/hot.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-p::first-letter{
-    text-transform: uppercase;
+p {
+  margin: 0;
 }
 
-
-.header, .page_title {
-    
-    font-family: "Spirax", sans-serif;
-
+p::first-letter {
+  text-transform: uppercase;
 }
 
- .main_ .moving_text, .info {
-   
-    font-family: "Poiret One", sans-serif;
-    font-size: 1.8rem;
+.page_title,
+.header .spiro * {
+  font-family: "Spirax", sans-serif;
+  color: rgb(238, 238, 240);
 }
 
-ul{
-    list-style: none;
+.header {
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  background-color: rgba(42, 21, 38, 0.75);
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a {
+  padding-inline: 5%;
+}
+
+/* in order to allow children to main to appear in body grid you use display: content on tag  */
+main {
+  display: contents;
+}
+
+.page_title {
+  grid-row: 2;
+  grid-column: 3/4;
+  align-content: center;
+  justify-self: center;
+
+  color: darkred;
+  font-size: 7vh;
+  margin: 0;
+}
+
+.poiret {
+  display: contents;
+  font-family: "Poiret One", sans-serif;
+  font-size: 3vh;
+  color: rgb(190, 190, 192);
+}
+
+.moving_text {
+  grid-row: 3;
+  grid-column: 2/5;
+  padding: 1rem;
+  /* justify-content: center; */
+}
+
+.bg {
+  padding: 1vw;
+  background-color: rgba(139, 0, 0, 0.743);
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  grid-column-start: 2;
+  padding: 1vw;
+}
+.left {
+  margin-bottom: 1vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.info {
+  grid-row: 4;
+  grid-column: 2/5;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 6vw;
+  margin-inline: 10vw;
+  background-color: rgba(0, 0, 0, 0.772);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+@media screen and (max-width: 570px) {
+  .moving_text {
+    grid-column: 3;
+    background-color: rgba(139, 0, 0, 0.743);
+ 
+  }
+
+  .right {
+    display: none;
+  }
+  .info {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (max-width: 450px) {
+  .moving_text {
+    grid-column: 1/-1;
+    margin: 10%;
+  }
+  
+  .right {
+    display: none;
+  }
+  .info {
+    grid-column: 1/-1;
+  }
 }
