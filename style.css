@@ -2,16 +2,16 @@ body {
   display: grid;
   box-sizing: content-box;
 
-  grid-template-columns: 1fr 1fr 50% 1fr 1fr;
+  grid-template-columns: auto;
   grid-template-rows: auto;
-  height: 360vh;
+  height: 100vh;
   margin: 0;
 
-     background: url(./assets/hot_juicy_cosy.jpg) no-repeat top center  ;
+     /* background: url(./assets/hot_juicy_cosy.jpg) no-repeat top center  ;
      background-origin: border-box;
 background-repeat: no-repeat;
     background-attachment:  local;
-    background-size: cover;
+    background-size: cover; */
   
 }
 
@@ -58,15 +58,32 @@ a {
   padding-inline: 5%;
 }
 
+
 #hot, #juicy, #cosy{
 
-    display: contents;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 50% 1fr 1fr;
+    /* justify-items: center; */
     
-   
+    
+    
+    
 }
 
+#hot{
+    background: url(assets/hot.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
 
+#juicy{
+    background: url(assets/juicy.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#cosy{
+    background: url(assets/cosy.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
 
 
 /* in order to allow children to main to appear in body grid you use display: content on tag  */
@@ -75,13 +92,13 @@ main {
 }
 
 .page_title {
-  /* grid-row: 2; */
+  grid-row: 1;
   grid-column: 3/4;
   align-content: center;
   justify-self: center;
 
   color: darkred;
-  font-size: 10vw;
+  font-size: 8vw;
   margin-top: 10vh;
 }
 
@@ -90,28 +107,35 @@ main {
   font-family: "Poiret One", sans-serif;
   font-size: 3vh;
   color: rgb(190, 190, 192);
-  overflow: auto;
+  /* overflow: auto; */
 }
 
-.moving_text {
-  /* grid-row: 3; */
-  grid-column: 2/5;
+.moving_text  {
+grid-row-start: 2 ;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  
   padding: 1rem;
   /* justify-content: center; */
 }
 
 .bg {
+
+    
   padding: 1vw;
   background-color: rgba(139, 0, 0, 0.743);
 }
 
-.right {
+ .right {
+
+
   display: flex;
   justify-content: flex-end;
-  grid-column-start: 2;
+  
   padding: 1vw;
 }
 .left {
+
   margin-bottom: 1vw;
   display: flex;
   justify-content: flex-start;
@@ -125,22 +149,24 @@ main {
   flex-shrink: 1;
   padding-inline: 6vw;
   margin-inline: 10vw;
-  margin-bottom: 20vw;
+  margin-bottom: 30vw;
   background-color: rgba(0, 0, 0, 0.772);
   /* height: 40vw; */
 
 }
 
-.ju{
-margin-top: 7vw;
 
-}
 
 footer{
     grid-column: 1/-1;
-    height: 3vh;
-    /* margin-top: 7vh; */
+    /* height: 3vw; */
+    /* margin-top: 2vw; */
     background-color: darkred;
+    
+}
+
+footer :last-child {
+    background-color: none;
 }
 
 ul {
@@ -162,15 +188,24 @@ ul {
   }
 }
 @media screen and (max-width: 450px) {
+
+  
+  
+
   .moving_text {
     grid-column: 1/-1;
     margin: 10%;
   }
-  
+  #cosy, #juicy, #hot{height: 100vh;}
   .right {
     display: none;
   }
   .info {
-    grid-column: 1/-1;
+    max-height: 35vw;
+    justify-content: space-between;
+    grid-column: 1/6;
+    font-size: large;
+    margin-bottom: 0;
+    margin-inline: 0;
   }
 }
