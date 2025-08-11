@@ -1,19 +1,20 @@
 body {
   display: grid;
-  box-sizing: border-box;
-  /* max-width: 700px; */
-  grid-template-columns: 1fr 1fr 50% 1fr 1fr;
-  grid-template-rows: 1fr 2fr 1fr 1fr;
-  height: 100vh;
-  grid-gap: 1rem;
-  /* margin: auto; */
+  box-sizing: content-box;
 
-  background: url(./assets/hot.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  grid-template-columns: 1fr 1fr 50% 1fr 1fr;
+  grid-template-rows: auto;
+  height: 360vh;
+  margin: 0;
+
+     background: url(./assets/hot_juicy_cosy.jpg) no-repeat top center  ;
+     background-origin: border-box;
+background-repeat: no-repeat;
+    background-attachment:  local;
+    background-size: cover;
+  
 }
+
 
 p {
   margin: 0;
@@ -30,22 +31,43 @@ p::first-letter {
 }
 
 .header {
-  grid-row: 1/1;
-  grid-column: 1/-1;
+ 
+   
+    padding-top: 1vw;
+    padding-bottom: 2vw;
   background-color: rgba(42, 21, 38, 0.75);
-  font-size: 3vh;
+  font-size: 4vh;
   font-weight: bold;
+  
+  position: fixed;
+  width: 100vw;
+  
+  
 }
 
+
+
 nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
 }
 
 a {
   padding-inline: 5%;
 }
+
+#hot, #juicy, #cosy{
+
+    display: contents;
+    height: 100vh;
+    
+   
+}
+
+
+
 
 /* in order to allow children to main to appear in body grid you use display: content on tag  */
 main {
@@ -53,14 +75,14 @@ main {
 }
 
 .page_title {
-  grid-row: 2;
+  /* grid-row: 2; */
   grid-column: 3/4;
   align-content: center;
   justify-self: center;
 
   color: darkred;
-  font-size: 7vh;
-  margin: 0;
+  font-size: 10vw;
+  margin-top: 10vh;
 }
 
 .poiret {
@@ -68,10 +90,11 @@ main {
   font-family: "Poiret One", sans-serif;
   font-size: 3vh;
   color: rgb(190, 190, 192);
+  overflow: auto;
 }
 
 .moving_text {
-  grid-row: 3;
+  /* grid-row: 3; */
   grid-column: 2/5;
   padding: 1rem;
   /* justify-content: center; */
@@ -95,13 +118,29 @@ main {
 }
 
 .info {
-  grid-row: 4;
+  /* grid-row: 4; */
   grid-column: 2/5;
   display: flex;
   justify-content: space-between;
+  flex-shrink: 1;
   padding-inline: 6vw;
   margin-inline: 10vw;
+  margin-bottom: 20vw;
   background-color: rgba(0, 0, 0, 0.772);
+  /* height: 40vw; */
+
+}
+
+.ju{
+margin-top: 7vw;
+
+}
+
+footer{
+    grid-column: 1/-1;
+    height: 3vh;
+    /* margin-top: 7vh; */
+    background-color: darkred;
 }
 
 ul {
@@ -111,7 +150,7 @@ ul {
 @media screen and (max-width: 570px) {
   .moving_text {
     grid-column: 3;
-    background-color: rgba(139, 0, 0, 0.743);
+    /* background-color: rgba(139, 0, 0, 0.743); */
  
   }
 

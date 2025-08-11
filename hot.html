@@ -1,54 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffe Shop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Spirax&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="pages spiro">
-        <a href=""><p>hot</p></a>
-        <a href=""><p>juicy</p></a>
-        <a href=""><p>cosy</p></a>
-      </nav>
-    </header>
 
-    <!-- in order to allow children to main to appear in body grid you use display: content on tag -->
-    <main >
-      <h2 class="page_title"><p>hot</p></h2>
-    <section class="poiret">
-      <section class="moving_text">
-        <p class="left"><span class="bg">
-          hot freshly ground black coffee or a cup of exquisite tea?
-        </p></span>
-        <p class="right"><span class="bg">we give you that perfect cup every time.</span></p>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffe Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Spirax&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <section class="info">
-        <ul>
-          <li>Mocha Latte</li>
-          <li>Espresso</li>
-          <li>Caffe Formaggio</li>
-          <li>Chai Verde Latte</li>
-        </ul>
-        <ul class="pad"></ul>
-        <ul>
-          <li>€ 7.50</li>
-          <li>€ 3.50</li>
-          <li>€ 5.00</li>
-          <li>€ 5.50</li>
-        </ul>
-      </section>
-      </section>
+<body>
+  <header class="header">
+    <nav class="pages spiro">
+      <a href="#h" class="link">
+        <p>hot</p>
+      </a>
+      <a href="#j" class="link">
+        <p>juicy</p>
+      </a>
+      <a href="#c" class="link">
+        <p>cosy</p>
+      </a>
+    </nav>
+  </header>
 
-      </main>
-  </body>
+  <!-- in order to allow children to main to appear in body grid you use display: content on tag -->
+  <main>
+    <section id="hot"  >
+      <h2 class="page_title" id="h">
+        <p >hot</p>
+      </h2>
+      <section class="poiret">
+        <section class="moving_text">
+          <p class="left"><span class="bg">
+              hot freshly ground black coffee or a cup of exquisite tea?
+          </p></span>
+          <p class="right"><span class="bg">we give you that perfect cup every time.</span></p>
+        </section>
+
+        <section class="info">
+          <ul>
+            <li>Mocha Latte</li>
+            <li>Espresso</li>
+            <li>Caffe Formaggio</li>
+            <li>Chai Verde Latte</li>
+          </ul>
+          <ul class="pad"></ul>
+          <ul>
+            <li>€ 7.50</li>
+            <li>€ 3.50</li>
+            <li>€ 5.00</li>
+            <li>€ 5.50</li>
+          </ul>
+        </section>
+        <footer></footer>
+      </section>
+    </section>
+
+ <section id="juicy">
+      <h2 class="page_title" id="j">
+        <p>juicy</p>
+      </h2>
+      <section class="poiret">
+        <section class="moving_text">
+          <p class="left"><span class="bg">
+              Ripe fruit - freshly squeezed.
+          </p></span>
+          <p class="right"><span class="bg">It's as simple as that. Chunky or smooth - it's your choice.</span></p>
+        </section>
+
+        <section class="info">
+          <ul>
+            <li>Branched Apricots</li>
+            <li>Deep Rasberries</li>
+            <li>Smooth Oranges</li>
+          </ul>
+          <ul class="pad"></ul>
+          <ul>
+            
+            <li>€ 4.20</li>
+            <li>€ 3.50</li>
+            <li>€ 6.50</li>
+          </ul>
+        </section>
+                <footer class="ju"></footer>
+      </section>
+    </section>
+
+     <section id="cosy">
+      <h2 class="page_title" id="c">
+        <p>cosy</p>
+      </h2>
+      <section class="poiret">
+        <section class="moving_text">
+          <p class="left"><span class="bg">
+              Hang around. Enjoy the settings.
+          </p></span>
+          <p class="right"><span class="bg">Use our fast WiFi. Borrow a newspaper or a novel.</span></p>
+        </section>
+
+        <section class="info">
+          <ul>
+            <li>Mon-Sun</li>
+            <li>Caffe Retro</li>
+            <li>0123-45 67 89</li>
+          </ul>
+          <ul class="pad"></ul>
+          <ul>
+            
+            <li>8am – 11pm</li>
+            <li>Canto VI</li>
+            <li>caffe@lorem.pge</li>
+          </ul>
+        </section>
+      </section>
+    </section>
+
+
+
+
+
+
+  </main>
+</body>
+
 </html>
